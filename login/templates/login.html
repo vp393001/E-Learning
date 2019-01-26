@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+  {% block content%}
+    {% if form.errors %}
+      <p class="error"> Invalid Username or Password </p>
+    {% endif %}
+
+<center>
+<h1 align="center">Login</h1>
+<form action="/login/auth/" method = "post">{% csrf_token %}
+
+
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+	</br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    </br>
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6Lc8O1EUAAAAABmPChtPu6hin6p6naCPOo34LDG7"></div>
+	</br>
+    <button type="submit">Login</button>
+	</br>
+	</br>
+	<span class="psw">New User : <a href="http://127.0.0.1:8000/signup/registration">Sign up</a></span>
+  </div>
+</form>
+</center>
+
+{%endblock %}

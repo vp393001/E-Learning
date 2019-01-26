@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/demo.css">
+
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+
+
+
+
+<title>www.DDUstudent.com</title>
+</head>
+<body>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'login/footer-distributed-with-address-and-phones.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'login/style.css' %}" />
+<div class="header">
+  <a href="#default" class="logo">www.DDUstudent.com</a>
+  <div class="header-right">
+    <a class="active" href="http://127.0.0.1:8000/login/login">Home</a>
+  {% if loggedin %}
+        <a href="/login/payment">Fees Payment</a>
+      {% endif %}
+
+   {% if loggedin %}
+        <a href="/login/video">Tutorials</a>
+      {% endif %}
+
+      <a href="#about">About</a>
+    <a href="/login/contact">Contact</a>
+      {% if loggedin %}
+        <a href="/login/logout">Log out</a>
+      {% endif %}
+
+  </div>
+</div>
+
+{%block content %}
+{%endblock %}
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>DDUstudent<span>.com</span></h3>
+
+				<p class="footer-links">
+					<a href="/login/login">Home</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="/login/contact">Contact</a>
+				</p>
+
+				<p class="footer-company-name">DDUstudent.com &copy; 2018</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>113, DDU Boys Hostel</span> Nadiad, Gujarat</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 8866296284</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:vivek@ddustudent.com">vivek@ddustudent.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About Us</span>
+					DDUstudent.com Online Academy takes the fundamental principles of education and applies them to today's digital world. Using cutting-edge technology, we're proud to educate tomorrow's leaders. Find out how you can be a part of the new world of education today.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="https://www.facebook.com/ddustudent/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/ddustudent"><i class="fa fa-twitter"></i></a>
+					<a href="https://in.linkedin.com/company/ddustudent.com"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/ddustudent/"><i class="fa fa-instagram"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+
+</body>
+</html>

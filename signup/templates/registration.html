@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %}
+  {% block content%}
+<body>
+<div id="Container">
+<center>
+ <h1> Student Registration Form </h1>
+    </center>
+
+ {% if success %}
+     <h3>Done</h3>
+ {% endif %}
+ <form method="POST" action="{% url 'signup' %}">{% csrf_token %}
+ 
+  <div class="userinput">
+   <b><label>  First Name  </label></b>
+   <input type="text" name="username" value="" placeholder="Enter First Name" required/>
+  </div>
+  
+  <div class="userinput">
+   <b><label> Last Name  </label></b>
+   <input type="text" name="lastName" placeholder="Enter Last Name" value="" required/>
+  </div>
+
+     <div class="userinput">
+   <b><label> User ID </label></b> &nbsp; &nbsp;
+   <input type="text" name="useid" value="" placeholder="Enter user ID" required/>
+  </div>
+
+     <div class="userinput">
+   <b><label> Password </label></b>
+   <input type="password" name="password" size="30" placeholder="Enter password" required>
+  </div>
+  
+  <div class="userinput">
+   <b><label> Email </label></b>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="email" value="" placeholder="enter email" required/>
+  </div>
+  
+  <div class="userinput">
+   <b><label> Gender </label></b>&nbsp;&nbsp;
+   <input type="radio" name="gender" value="m"/> Male
+   <input type="radio" name="gender" value="f" /> Female    
+  </div>
+ <br>
+  <div class="userinput">
+   <b><label> DOB </label></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="date" name="dob" required>
+  </div>
+     <br>
+  
+  <div class="userinput">
+   <b><label>City </label></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <select name="city" required>
+    <option value="1">Ankleshwar</option>
+    <option value="2">Nadiad</option>
+    <option value="3">Surat</option>
+   </select>
+  </div>
+<br>
+  
+  <div style="text-align:center">
+      <button type="submit">Submit</button>
+       <button type="Reset">Reset</button>
+  </div>
+ </form>
+ </div>
+</center>
+ 
+{%endblock %}
